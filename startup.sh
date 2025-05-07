@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Define paths
-SERVER_DIR="$HOME/{change_this_dir_to_project_dir}/bus-reservation/server"
-CLIENT_DIR="$HOME/{change_this_dir_to_project_dir}/bus-reservation/client"
+SERVER_DIR="$HOME/{change_this_dir_to_project_dir}/bus-reservation-system/server"
+CLIENT_DIR="$HOME/{change_this_dir_to_project_dir}/bus-reservation-system/client"
 TOMCAT_WEBAPPS="$HOME/tomcat/webapps"
 TOMCAT_BIN="$HOME/tomcat/bin"
 
