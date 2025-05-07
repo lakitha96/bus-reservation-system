@@ -69,7 +69,7 @@ curl --location 'http://localhost:8080/bus-reservation-server/api/v1/bookings' \
 - All reservations share the same 40 seats on the bus, no matter the origin or destination. 
 - If a seat is booked only up to stop C, it becomes available again from C onward (e.g.,
 for C to D). 
-- Fixed seat layout: The bus always has 40 seats labeled from 1A to 10D (4 seats per row
+- The bus always has 40 seats labeled from 1A to 10D (4 seats per row
 and 10 rows). 
 - Fixed journey stops: A, B, C, and D. Any other stop (e.g., E) is considered invalid. 
 - Prices between each pair of stops are hardcoded and same both directions.
