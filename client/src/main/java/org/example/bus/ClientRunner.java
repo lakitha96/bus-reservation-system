@@ -5,6 +5,7 @@ import org.example.bus.client.BookingApiClient;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
@@ -16,14 +17,17 @@ import java.util.logging.Logger;
 public class ClientRunner {
     private static final Logger logger = Logger.getLogger(ClientRunner.class.getName());
 
-
     public static void main(String[] args) {
         logger.info("Starting client...");
 
         AvailabilityApiClient.callAvailabilityAPI();
 
-        int numberOfUsers = 10;
-        ExecutorService executor = Executors.newFixedThreadPool(5);
+        Scanner scanner = new Scanner(System.in);
+        logger.info("Enter the number of users to simulate: ");
+        int numberOfUsers = scanner.nextInt();
+        scanner.close();
+
+        ExecutorService executor = Executors.newFixedThreadPool(numberOfUsers);
         List<Future<?>> futures = new ArrayList<>();
 
         for (int i = 0; i < numberOfUsers; i++) {
